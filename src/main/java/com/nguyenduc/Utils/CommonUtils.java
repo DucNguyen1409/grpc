@@ -1,8 +1,13 @@
-package com.nguyenduc.orchestrator.Utils;
+package com.nguyenduc.Utils;
+
+import com.nguyenduc.dto.grpc.RequestDto;
+import com.nguyenduc.grpc.MainServiceOuterClass;
+import org.springframework.stereotype.Component;
 
 import java.security.SecureRandom;
 
-public class Common {
+@Component
+public class CommonUtils {
 
     private static final String VALID_CHAR = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789";
 
@@ -16,4 +21,12 @@ public class Common {
 
         return "AAAAAA".contentEquals(result) ? generateLMID() : result.toString();
     }
+
+    public static MainServiceOuterClass.ServiceGrpcRequest buildGrpcRequest(RequestDto<?> dto, String jsonData) {
+        return MainServiceOuterClass.ServiceGrpcRequest.newBuilder()
+                .setLmid(dto.getLmid())
+                .setJsonData(jsonData)
+                .build();
+    }
+
 }

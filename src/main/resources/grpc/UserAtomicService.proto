@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package com.nguyenduc.grpc;
+
+service UserAtomicService {
+    rpc getUserByCardNo (UserAtomicRequest) returns (UserAtomicResponse);;
+}
+
+message UserAtomicRequest {
+    string lmid = 1;
+    UserAtomicRequestData data = 2;
+}
+
+message UserAtomicRequestData {
+    string cardNo = 1;
+}
+
+message UserAtomicResponse {
+    Result result = 2;
+}
+
+message UserAtomicResponseData {
+    repeated InfoData infoData = 1;
+}
+
+message InfoData {
+    string name = 1;
+    string age = 2;
+}
+
+message Result {
+    string description = 1;
+    string responseCode = 2;
+}

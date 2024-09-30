@@ -1,4 +1,4 @@
-package com.nguyenduc.orchestrator.constant;
+package com.nguyenduc.constant;
 
 import java.util.Arrays;
 

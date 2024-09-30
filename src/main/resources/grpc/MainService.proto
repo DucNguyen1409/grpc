@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package com.nguyenduc.grpc;
+
+service MainService {
+    rpc getUserByCardNo(ServiceGrpcRequest) returns (ServiceGrpcResponse);
+}
+
+message ServiceGrpcRequest {
+    string requestId = 1;
+    string functionName = 2;
+    string jsonData = 3;
+    string lmid = 8;
+}
+
+message ServiceGrpcResponse {
+    string responseCode = 1;
+    string description = 2;
+    string jsonData = 3;
+}
