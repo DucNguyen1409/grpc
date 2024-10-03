@@ -1,9 +1,10 @@
 syntax = "proto3";
 
+option java_multiple_files = true;
 package com.nguyenduc.grpc;
 
 service UserAtomicService {
-    rpc getUserByCardNo (UserAtomicRequest) returns (UserAtomicResponse);;
+    rpc getUserByCardNo(UserAtomicRequest) returns (UserAtomicResponse);
 }
 
 message UserAtomicRequest {
@@ -16,6 +17,7 @@ message UserAtomicRequestData {
 }
 
 message UserAtomicResponse {
+    UserAtomicResponseData data = 1;
     Result result = 2;
 }
 

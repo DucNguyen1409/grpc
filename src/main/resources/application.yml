@@ -4,9 +4,4 @@ spring:
 grpc:
   server:
     port: 9090
-  client:
-    hello-service:
-      address: 'localhost:9090'
-      enableKeepAlive: true
-      keepAliveWithoutCalls: true
-      negotiationType: plainText
+
