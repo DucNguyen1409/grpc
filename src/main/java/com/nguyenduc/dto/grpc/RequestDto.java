@@ -10,6 +10,4 @@ import lombok.*;
 public class RequestDto<T> {
     private String lmid;
     private T data;
-
-
 }
