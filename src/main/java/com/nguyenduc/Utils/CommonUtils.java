@@ -1,7 +1,7 @@
 package com.nguyenduc.Utils;
 
 import com.nguyenduc.dto.grpc.RequestDto;
-import com.nguyenduc.grpc.MainServiceOuterClass;
+import com.nguyenduc.grpc.ServiceGrpcRequest;
 import org.springframework.stereotype.Component;
 
 import java.security.SecureRandom;
@@ -22,8 +22,8 @@ public class CommonUtils {
         return "AAAAAA".contentEquals(result) ? generateLMID() : result.toString();
     }
 
-    public static MainServiceOuterClass.ServiceGrpcRequest buildGrpcRequest(RequestDto<?> dto, String jsonData) {
-        return MainServiceOuterClass.ServiceGrpcRequest.newBuilder()
+    public static ServiceGrpcRequest buildGrpcRequest(RequestDto<?> dto, String jsonData) {
+        return ServiceGrpcRequest.newBuilder()
                 .setLmid(dto.getLmid())
                 .setJsonData(jsonData)
                 .build();

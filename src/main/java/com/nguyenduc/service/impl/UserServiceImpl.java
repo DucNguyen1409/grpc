@@ -2,7 +2,6 @@ package com.nguyenduc.service.impl;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
 import com.nguyenduc.Utils.CommonUtils;
 import com.nguyenduc.constant.ResponseStatus;
 import com.nguyenduc.dto.UserDataDto;
@@ -11,6 +10,7 @@ import com.nguyenduc.dto.UserRequestDto;
 import com.nguyenduc.dto.grpc.RequestDto;
 import com.nguyenduc.dto.grpc.ResponseDto;
 import com.nguyenduc.grpc.MainServiceGrpc;
+import com.nguyenduc.grpc.ServiceGrpcResponse;
 import com.nguyenduc.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -20,8 +20,6 @@ import org.springframework.util.StringUtils;
 
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
-
-import static com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcResponse;
 
 @Slf4j
 @Service
@@ -58,6 +56,7 @@ public class UserServiceImpl implements UserService {
         } else {
             data = new UserDataDto();
         }
+        log.info("{}: frUserService: getUserByCardNo {}", requestDto.getLmid(), result);
 
         return ResponseDto.buildResponse(
                 requestDto,

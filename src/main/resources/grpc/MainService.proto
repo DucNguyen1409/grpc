@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 package com.nguyenduc.grpc;
+option java_multiple_files = true;
 
 service MainService {
     rpc getUserByCardNo(ServiceGrpcRequest) returns (ServiceGrpcResponse);

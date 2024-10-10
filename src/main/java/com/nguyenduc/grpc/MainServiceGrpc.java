@@ -27,30 +27,30 @@ public final class MainServiceGrpc {
   public static final String SERVICE_NAME = "com.nguyenduc.grpc.MainService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcRequest,
-      com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcResponse> getGetUserByCardNoMethod;
+  private static volatile io.grpc.MethodDescriptor<com.nguyenduc.grpc.ServiceGrpcRequest,
+      com.nguyenduc.grpc.ServiceGrpcResponse> getGetUserByCardNoMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getUserByCardNo",
-      requestType = com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcRequest.class,
-      responseType = com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcResponse.class,
+      requestType = com.nguyenduc.grpc.ServiceGrpcRequest.class,
+      responseType = com.nguyenduc.grpc.ServiceGrpcResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcRequest,
-      com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcResponse> getGetUserByCardNoMethod() {
-    io.grpc.MethodDescriptor<com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcRequest, com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcResponse> getGetUserByCardNoMethod;
+  public static io.grpc.MethodDescriptor<com.nguyenduc.grpc.ServiceGrpcRequest,
+      com.nguyenduc.grpc.ServiceGrpcResponse> getGetUserByCardNoMethod() {
+    io.grpc.MethodDescriptor<com.nguyenduc.grpc.ServiceGrpcRequest, com.nguyenduc.grpc.ServiceGrpcResponse> getGetUserByCardNoMethod;
     if ((getGetUserByCardNoMethod = MainServiceGrpc.getGetUserByCardNoMethod) == null) {
       synchronized (MainServiceGrpc.class) {
         if ((getGetUserByCardNoMethod = MainServiceGrpc.getGetUserByCardNoMethod) == null) {
           MainServiceGrpc.getGetUserByCardNoMethod = getGetUserByCardNoMethod = 
-              io.grpc.MethodDescriptor.<com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcRequest, com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.nguyenduc.grpc.ServiceGrpcRequest, com.nguyenduc.grpc.ServiceGrpcResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "com.nguyenduc.grpc.MainService", "getUserByCardNo"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcRequest.getDefaultInstance()))
+                  com.nguyenduc.grpc.ServiceGrpcRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcResponse.getDefaultInstance()))
+                  com.nguyenduc.grpc.ServiceGrpcResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new MainServiceMethodDescriptorSupplier("getUserByCardNo"))
                   .build();
           }
@@ -88,8 +88,8 @@ public final class MainServiceGrpc {
 
     /**
      */
-    public void getUserByCardNo(com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcRequest request,
-        io.grpc.stub.StreamObserver<com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcResponse> responseObserver) {
+    public void getUserByCardNo(com.nguyenduc.grpc.ServiceGrpcRequest request,
+        io.grpc.stub.StreamObserver<com.nguyenduc.grpc.ServiceGrpcResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGetUserByCardNoMethod(), responseObserver);
     }
 
@@ -99,8 +99,8 @@ public final class MainServiceGrpc {
             getGetUserByCardNoMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcRequest,
-                com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcResponse>(
+                com.nguyenduc.grpc.ServiceGrpcRequest,
+                com.nguyenduc.grpc.ServiceGrpcResponse>(
                   this, METHODID_GET_USER_BY_CARD_NO)))
           .build();
     }
@@ -126,8 +126,8 @@ public final class MainServiceGrpc {
 
     /**
      */
-    public void getUserByCardNo(com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcRequest request,
-        io.grpc.stub.StreamObserver<com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcResponse> responseObserver) {
+    public void getUserByCardNo(com.nguyenduc.grpc.ServiceGrpcRequest request,
+        io.grpc.stub.StreamObserver<com.nguyenduc.grpc.ServiceGrpcResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetUserByCardNoMethod(), getCallOptions()), request, responseObserver);
     }
@@ -153,7 +153,7 @@ public final class MainServiceGrpc {
 
     /**
      */
-    public com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcResponse getUserByCardNo(com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcRequest request) {
+    public com.nguyenduc.grpc.ServiceGrpcResponse getUserByCardNo(com.nguyenduc.grpc.ServiceGrpcRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetUserByCardNoMethod(), getCallOptions(), request);
     }
@@ -179,8 +179,8 @@ public final class MainServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcResponse> getUserByCardNo(
-        com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.nguyenduc.grpc.ServiceGrpcResponse> getUserByCardNo(
+        com.nguyenduc.grpc.ServiceGrpcRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetUserByCardNoMethod(), getCallOptions()), request);
     }
@@ -206,8 +206,8 @@ public final class MainServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_USER_BY_CARD_NO:
-          serviceImpl.getUserByCardNo((com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcRequest) request,
-              (io.grpc.stub.StreamObserver<com.nguyenduc.grpc.MainServiceOuterClass.ServiceGrpcResponse>) responseObserver);
+          serviceImpl.getUserByCardNo((com.nguyenduc.grpc.ServiceGrpcRequest) request,
+              (io.grpc.stub.StreamObserver<com.nguyenduc.grpc.ServiceGrpcResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
